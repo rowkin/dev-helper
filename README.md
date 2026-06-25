@@ -43,13 +43,18 @@
 
 ## 🚀 安装使用
 
-### 方法一：直接下载发布包安装（推荐）
+### 方法一：Chrome Web Store 商店安装（首选推荐 🌟）
 
-1. 访问对外发布仓库 [dev-helper/releases](https://github.com/rowkin/dev-helper/releases) 下载最新的打包 ZIP 文件并解压。
-2. 打开 Chrome，访问 `chrome://extensions`。
-3. 启用右上角 **「开发者模式」**。
-4. 点击 **「加载已解压的扩展程序」**。
-5. 选择解压出的 `DevHelper` 文件夹。
+可以直接在 Chrome 网上应用店一键安装，省去手动下载解压的步骤，并支持自动后台更新与云端配置同步：
+👉 [**前往 Chrome Web Store 安装 DevHelper**](https://chromewebstore.google.com/detail/dobgahhmdodeeondedoikibehhmnalie)
+
+### 方法二：下载发布包手动加载安装（离线/开发者模式）
+
+1. 访问对外发布仓库 [dev-helper/releases](https://github.com/rowkin/dev-helper/releases) 下载最新的打包 ZIP 压缩包并解压。
+2. 打开 Chrome，在地址栏输入 `chrome://extensions` 并回车。
+3. 启用右上角的 **「开发者模式」**。
+4. 点击左上角的 **「加载已解压的扩展程序」**。
+5. 选择解压出的 `dev-helper` 文件夹目录。
 
 ### 方法二：编译打包并安装
 
