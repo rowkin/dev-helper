@@ -2,7 +2,7 @@
 
 > 一款专为七九在线科技打造的 Chrome 浏览器扩展，集成 JSON 格式化、编解码、API 调试、代码格式化等 16 个常用开发工具，并内置 **AI 解读** 和独立 **AI 助手**，让开发效率飞升。
 
-[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-blue?logo=googlechrome)](https://github.com/rowkin/DevHelper)
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-blue?logo=googlechrome)](https://github.com/rowkin/dev-helper)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-green)](https://developer.chrome.com/docs/extensions/mv3/)
 
 ---
@@ -204,4 +204,4 @@ DevHelper/
 
 ---
 
-> 如有问题请提交 [Issue](https://github.com/rowkin/DevHelper/issues)。
+> 如有问题请提交 [Issue](https://github.com/rowkin/dev-helper/issues)。
