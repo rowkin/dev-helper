@@ -56,24 +56,7 @@
 4. 点击左上角的 **「加载已解压的扩展程序」**。
 5. 选择解压出的 `dev-helper` 文件夹目录。
 
-### 方法二：编译打包并安装
-
-若需要从源码编译打包：
-
-1. 克隆本项目私有源码库：
-   ```bash
-   git clone https://github.com/rowkin/dev-helper.git
-   ```
-2. 在项目根目录下运行打包脚本：
-   ```bash
-   npm run build
-   ```
-3. 编译打包生成的产物存放在 `dist/` 目录下（包含 ZIP 安装包，如 `dev-helper-v1.0.0.zip`）。
-4. 加载 `dist/` 目录中的已解压包进行本地调试。
-
-6. 工具栏出现 DevHelper 图标即安装成功 🎉。
-
-### 方法二：快捷键
+### 💡 快捷键
 
 安装后可使用 `Alt+Shift+D` 快速打开 DevHelper（Mac 同样适用）。
 
@@ -101,47 +84,6 @@ API Key: sk-xxxx
 
 ---
 
-## 📁 项目结构
-
-```text
-DevHelper/
-├── manifest.json          # Chrome 扩展配置（Manifest V3）
-├── popup.html             # 插件弹窗主页
-├── background.js          # Service Worker 后台脚本
-├── .gitignore
-├── README.md
-│
-├── styles/
-│   ├── popup.css          # 弹窗样式（暗色毛玻璃主题）
-│   └── common.css         # 工具页面通用样式
-│
-├── js/
-│   ├── popup.js           # 弹窗逻辑（工具列表、搜索、收藏）
-│   ├── ai-service.js      # AI 服务统一模块
-│   └── common.js          # 公共函数（Toast、导航栏、AI 面板）
-│
-├── pages/
-│   ├── ai-assistant.html  # AI 助手独立页面（核心功能）
-│   ├── json-format.html   # JSON 格式化
-│   ├── encode-decode.html # 编解码工具
-│   ├── jwt-parser.html    # JWT 解析
-│   ├── timestamp.html     # 时间戳转换
-│   ├── api-tester.html    # API 调试
-│   ├── code-beautify.html # 代码格式化
-│   ├── regex-test.html    # 正则测试
-│   ├── uuid-gen.html      # UUID 生成器
-│   ├── password-gen.html  # 密码生成器
-│   └── ...（更多工具）
-│
-└── icons/
-    ├── icon16.png
-    ├── icon32.png
-    ├── icon48.png
-    └── icon128.png
-```
-
----
-
 ## 🎨 设计理念
 
 - **明亮与暗色多主题支持**：主页面和工具页卡片完美适配明亮（Light）与暗色（Dark）主题模式，并支持一键切换。
@@ -161,25 +103,6 @@ DevHelper/
 | `clipboardWrite` | 支持一键复制功能 |
 
 无网络请求权限（除用户主动触发的 AI 调用和 API 调试外）。
-
----
-
-## 🤝 贡献指南
-
-欢迎七九在线科技成员贡献代码！
-
-1. Fork 本仓库。
-2. 创建功能分支：`git checkout -b feature/new-tool`。
-3. 提交变更：`git commit -m 'feat: 添加 XXX 工具'`。
-4. 推送分支：`git push origin feature/new-tool`。
-5. 提交 Pull Request。
-
-### 添加新工具
-
-1. 在 `pages/` 目录创建 `{tool-id}.html`。
-2. 在 `js/popup.js` 的 `TOOLS` 数组添加工具配置。
-3. 页面中引入 `ai-service.js` 和 `common.js`。
-4. 调用 `createNavbar()` and `createInlineAIPanel()` 即可获得 AI 能力。
 
 ---
 
