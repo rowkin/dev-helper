@@ -1,6 +1,6 @@
 # DevHelper - 七九在线科技开发者工具箱
 
-> 一款专为七九在线科技打造的 Chrome 浏览器扩展，集成 JSON 格式化、编解码、API 调试、代码格式化等 16 个常用开发工具，并内置 **AI 解读** 和独立 **AI 助手**，让开发效率飞升。
+> 一款专为七九在线科技打造的 Chrome 浏览器扩展，集成 JSON 格式化、编解码、API 调试、代码格式化等 17 个常用开发工具，并内置 **AI 解读** 和独立 **AI 助手**，让开发效率飞升。
 
 [![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-blue?logo=googlechrome)](https://github.com/rowkin/dev-helper)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-green)](https://developer.chrome.com/docs/extensions/mv3/)
@@ -9,7 +9,7 @@
 
 ## ✨ 功能特性
 
-### 🛠️ 开发工具（16 个工具）
+### 🛠️ 开发工具（17 个工具）
 
 | 工具 | 功能描述 | AI 集成 |
 | :--- | :--- | :--- |
@@ -29,6 +29,7 @@
 | **进制转换** | 2~36 进制数字互转 | — |
 | **图片 Base64** | 图片与 Base64 互转 | — |
 | **Markdown 编辑器** | GFM 语法、Mermaid 图表渲染、双栏同步滚动 | ✅ AI 辅助写作 |
+| **页面性能检测** | 网络耗时时序瀑布图、核心 Web Vitals 评分、性能诊断与调优建议 | ✅ AI 专家诊断 |
 
 ### 🤖 AI 助手与双栏架构
 
@@ -55,6 +56,23 @@
 3. 启用右上角的 **「开发者模式」**。
 4. 点击左上角的 **「加载已解压的扩展程序」**。
 5. 选择解压出的 `dev-helper` 文件夹目录。
+
+### 方法三：编译打包并安装 (仅源码库支持)
+
+若需要从源码编译打包：
+
+1. 克隆本项目私有源码库：
+   ```bash
+   git clone https://github.com/rowkin/DevHelper.git
+   ```
+2. 在项目根目录下运行打包脚本：
+   ```bash
+   npm run build
+   ```
+3. 编译打包生成的产物存放在 `dist/` 目录下（包含 ZIP 安装包，如 `dev-helper-v1.0.0.zip`）。
+4. 加载 `dist/` 目录中的已解压包进行本地调试。
+
+5. 工具栏出现 DevHelper 图标即安装成功 🎉。
 
 ### 💡 快捷键
 
@@ -84,6 +102,47 @@ API Key: sk-xxxx
 
 ---
 
+## 📁 项目结构
+
+```text
+DevHelper/
+├── manifest.json          # Chrome 扩展配置（Manifest V3）
+├── popup.html             # 插件弹窗主页
+├── background.js          # Service Worker 后台脚本
+├── .gitignore
+├── README.md
+│
+├── styles/
+│   ├── popup.css          # 弹窗样式（暗色毛玻璃主题）
+│   └── common.css         # 工具页面通用样式
+│
+├── js/
+│   ├── popup.js           # 弹窗逻辑（工具列表、搜索、收藏）
+│   ├── ai-service.js      # AI 服务统一模块
+│   └── common.js          # 公共函数（Toast、导航栏、AI 面板）
+│
+├── pages/
+│   ├── ai-assistant.html  # AI 助手独立页面（核心功能）
+│   ├── json-format.html   # JSON 格式化
+│   ├── encode-decode.html # 编解码工具
+│   ├── jwt-parser.html    # JWT 解析
+│   ├── timestamp.html     # 时间戳转换
+│   ├── api-tester.html    # API 调试
+│   ├── code-beautify.html # 代码格式化
+│   ├── regex-test.html    # 正则测试
+│   ├── uuid-gen.html      # UUID 生成器
+│   ├── password-gen.html  # 密码生成器
+│   └── ...（更多工具）
+│
+└── icons/
+    ├── icon16.png
+    ├── icon32.png
+    ├── icon48.png
+    └── icon128.png
+```
+
+---
+
 ## 🎨 设计理念
 
 - **明亮与暗色多主题支持**：主页面和工具页卡片完美适配明亮（Light）与暗色（Dark）主题模式，并支持一键切换。
@@ -106,7 +165,33 @@ API Key: sk-xxxx
 
 ---
 
+## 🤝 贡献指南
+
+欢迎七九在线科技成员贡献代码！
+
+1. Fork 本仓库。
+2. 创建功能分支：`git checkout -b feature/new-tool`。
+3. 提交变更：`git commit -m 'feat: 添加 XXX 工具'`。
+4. 推送分支：`git push origin feature/new-tool`。
+5. 提交 Pull Request。
+
+### 添加新工具
+
+1. 在 `pages/` 目录创建 `{tool-id}.html`。
+2. 在 `js/popup.js` 的 `TOOLS` 数组添加工具配置。
+3. 页面中引入 `ai-service.js` 和 `common.js`。
+4. 调用 `createNavbar()` and `createInlineAIPanel()` 即可获得 AI 能力。
+
+---
+
 ## 📝 更新日志
+
+### v1.2.0 (2026-06-29)
+
+- ⚡ 新增「页面性能检测」工具，完美还原网络时序瀑布图，评定核心 Web Vitals 指标。
+- 🛠️ 针对 DNS 延迟、TCP 握手、TTFB 耗时与 DOM 阻塞提供高精度性能诊断及调优方案。
+- 🤖 工具深度融合 DevHelperAI 大模型解读，一键生成服务器/代码级的优化配置参考。
+- 📦 全局同步更新版本为 v1.2.0，重构 Popup 快捷入口与 activeTab 智能透传机制。
 
 ### v1.1.0 (2026-06-23)
 
