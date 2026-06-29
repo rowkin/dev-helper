@@ -1,5 +1,21 @@
 # DevHelper 更新日志
 
+## v1.3.0 (2026-06-29)
+
+### 🚀 新功能
+*   **颜色转换工具深度扩展**：
+    *   **屏幕级吸色 (EyeDropper)**：正式支持 Chrome 原生 `EyeDropper` API。点击“滴管拾色”后可触发高精度放大镜，支持吸取当前网页、其他浏览器标签页、甚至浏览器窗口外的桌面任意像素颜色。
+
+### ⚙️ 优化与修复
+*   **AI 表格流式渲染增强**：
+    *   重构 `renderInlineMarkdown` 函数，增加占位符提取和流式表格逐行扫描识别机制，完美解决 AI 面板生成 Markdown 表格无法渲染、换行导致布局塌陷的问题。
+*   **Gemini Nano 报错修复**：
+    *   针对 LanguageModel 实例创建时 expectedOutputLanguages 对 'zh' 的类型抛错问题进行修复，对齐 Chrome 最新标准，消除控制台警告。
+*   **版本同步**：
+    *   全局同步更新 `manifest.json`、`package.json`、Popup 及全景控制台的版本信息为 `v1.3.0`。
+
+---
+
 ## v1.2.0 (2026-06-29)
 
 ### 🚀 新功能

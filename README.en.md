@@ -23,7 +23,7 @@
 | **UUID Generator** | UUID v4 / NanoID / Snowflake ID batch generation | ✅ AI explanation |
 | **Password Generator** | Secure password generator, strength evaluation | ✅ AI Safety suggestions |
 | **Hash Calculator** | MD5 / SHA-1 / SHA-256 / SHA-512 | ✅ AI Interpretation |
-| **Color Converter** | HEX / RGB / HSL / HSV conversion, color picker | — |
+| **Color Converter** | HEX / RGB / HSL / HSV conversion, high precision native EyeDropper screen & tab color picker | — |
 | **QR Code** | Generate and decode QR codes with custom styles | — |
 | **JSON Diff** | Visualize differences between two JSON objects | ✅ AI Diff analysis |
 | **Radix Converter** | Conversions between 2 and 36 bases | — |
