@@ -1,5 +1,18 @@
 # DevHelper 更新日志
 
+## v1.3.1 (2026-06-30)
+
+### ⚙️ 优化与修复
+
+* 消除多次重复载入脚本导致的 SyntaxError 错误：
+  * 彻底清理全部工具 HTML 页面中由于重复引入 `ai-service.js` 和 `common.js` 导致的 `SyntaxError: Identifier 'AI_PROVIDERS' has already been declared` 及 `LOGO_SVG` 重复声明报错。
+* Chrome 128+ 内置 AI API 规范适配：
+  * 在 `js/ai-service.js` 和 `js/tools/index.js` 的 `create` 调用中加入最新的 `expectedOutputs: [{ type: 'text', languages: ['en'] }]` 参数声明，彻底消除 Chrome 控制台上报的 `No output language was specified in a LanguageModel API request` 警告。
+* 新增磁盘可用空间不足的温馨提示：
+  * 在唤起本地 AI 模型下载的提示、Toast 及配置 Flags 指引中，增加模型下载需要 10GB 以上磁盘可用空间的温馨说明，帮助用户在遇到磁盘空间不足（The device does not have enough space...）导致模型下载失败时快速定位。
+
+---
+
 ## v1.3.0 (2026-06-29)
 
 ### 🚀 新功能
