@@ -1,6 +1,6 @@
 # DevHelper - Developer Toolbox
 
-> A Chrome extension customized for developers, integrating 17 essential tools including JSON formatting, encoding/decoding, API testing, code formatting, and more. Features built-in **AI Interpretation** and a standalone **AI Assistant** to boost development efficiency.
+> A Chrome extension customized for developers, integrating 18 essential tools including JSON formatting, encoding/decoding, API testing, code formatting, and more. Features built-in **AI Interpretation** and a standalone **AI Assistant** to boost development efficiency.
 
 [![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-blue?logo=googlechrome)](https://github.com/rowkin/dev-helper)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-green)](https://developer.chrome.com/docs/extensions/mv3/)
@@ -9,7 +9,7 @@
 
 ## ✨ Features
 
-### 🛠️ Developer Tools (17 Tools)
+### 🛠️ Developer Tools (18 Tools)
 
 | Tool | Description | AI Integration |
 | :--- | :--- | :--- |
