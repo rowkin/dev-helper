@@ -1,6 +1,6 @@
 # DevHelper - 七九在线科技开发者工具箱
 
-> 一款专为七九在线科技打造的 Chrome 浏览器扩展，集成 JSON 格式化、编解码、API 调试、代码格式化等 18 个常用开发工具，并内置 **AI 解读** 和独立 **AI 助手**，让开发效率飞升。
+> 一款专为七九在线科技打造的 Chrome 浏览器扩展，集成 JSON 格式化、编解码、API 调试、代码格式化等 19 个常用开发工具，并内置 **AI 解读** 和独立 **AI 助手**，让开发效率飞升。
 
 [![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-blue?logo=googlechrome)](https://github.com/rowkin/dev-helper)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-green)](https://developer.chrome.com/docs/extensions/mv3/)
@@ -9,7 +9,7 @@
 
 ## ✨ 功能特性
 
-### 🛠️ 开发工具（17 个工具）
+### 🛠️ 开发工具（18 个工具）
 
 | 工具 | 功能描述 | AI 集成 |
 | :--- | :--- | :--- |
@@ -30,6 +30,7 @@
 | **图片 Base64** | 图片与 Base64 互转 | — |
 | **Markdown 编辑器** | GFM 语法、Mermaid 图表渲染、双栏同步滚动 | ✅ AI 辅助写作 |
 | **页面性能检测** | 网络耗时时序瀑布图、核心 Web Vitals 评分、性能诊断与调优建议 | ✅ AI 专家诊断 |
+| **IP 与网速检测** | 内外网 IP 探测、网络延迟(Ping/Jitter)与上传下载测速 | ✅ AI 智能网络建议 |
 
 ### 🤖 AI 助手与双栏架构
 
@@ -62,13 +63,17 @@
 若需要从源码编译打包：
 
 1. 克隆本项目私有源码库：
+
    ```bash
    git clone https://github.com/rowkin/DevHelper.git
    ```
+
 2. 在项目根目录下运行打包脚本：
+
    ```bash
    npm run build
    ```
+
 3. 编译打包生成的产物存放在 `dist/` 目录下（包含 ZIP 安装包，如 `dev-helper-v1.0.0.zip`）。
 4. 加载 `dist/` 目录中的已解压包进行本地调试。
 
@@ -185,6 +190,18 @@ DevHelper/
 ---
 
 ## 📝 更新日志
+
+### v1.4.0 (2026-07-07)
+
+- 🌐 **集成「IP 与网速检测」工具 (⌥6)**：支持 WebRTC Local IP 探测、公网 IP 地理定位及 ISP 信息查询，具备 Ping/Jitter 延迟测速及 CDN 下载/上传网速评估，并由 AI 进行网络瓶颈诊断，测试历史记录支持本地持久化。
+- 📸 **截图工具优化与 AI 高保真渲染**：优化长图滚动捕获拼接算法，修复动态粘性元素干扰；升级 AI 容器为高度自适应局部滚动卡片，消除多余白边，支持 Markdown GFM 表格和代码高亮格式化渲染。
+- 💬 **常驻 AI 输入窗口优化**：修复输入多行内容时视口溢出问题，自适应拉伸高度；增加 AI 机器人回复流式 Loading 骨架态。
+- ⚙️ **版本全局对齐**：同步更新 `manifest.json`、`package.json`、Popup 和全景控制台的版本信息为 `v1.4.0`，工具计数升级至 `19`。
+
+### v1.3.2 (2026-07-02)
+
+- 📸 **新增「屏幕截图」工具**：支持可视区域、全页面长图拼接与选区截图，内置 Canvas 编辑标注功能与 AI OCR 文本提取大模型协同。
+- ⚙️ **版本同步**：同步更新 Manifest、Popup 和 site 落地页版本号至 `v1.3.2`，工具总数同步更新至 `18`。
 
 ### v1.3.0 (2026-06-29)
 
