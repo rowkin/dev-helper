@@ -1,6 +1,6 @@
 # DevHelper - 七九在线科技开发者工具箱
 
-> 一款专为七九在线科技打造的 Chrome 浏览器扩展，集成 JSON 格式化、编解码、API 调试、代码格式化等 19 个常用开发工具，并内置 **AI 解读** 和独立 **AI 助手**，让开发效率飞升。
+> 一款专为七九在线科技打造的 Chrome 浏览器扩展，集成 JSON 格式化、编解码、API 调试、代码格式化等 20 个常用开发工具，并内置 **AI 解读** 和独立 **AI 助手**，让开发效率飞升。
 
 [![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-blue?logo=googlechrome)](https://github.com/rowkin/dev-helper)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-green)](https://developer.chrome.com/docs/extensions/mv3/)
@@ -190,6 +190,13 @@ DevHelper/
 ---
 
 ## 📝 更新日志
+
+### v1.4.1 (2026-07-08)
+
+- 🔍 **图片放大查看器 (Lightbox)**：为生成的网页截图与二维码提供高拟真手势交互 Lightbox 弹窗，支持鼠标拖拽平移、滚轮缩放、旋转及一键下载。
+- 💬 **常驻 AI 对话删除升级**：左侧历史会话支持 Hover 单项一键删除，右侧聊天泡气泡支持悬浮精准删除。
+- 💾 **媒体资产持久化 (防刷新丢失)**：引入会话级 `mediaAssets` 持久化大图映射机制，彻底解决刷新后长截图与二维码裂图丢失的问题。
+- ⚙️ **版本全局对齐**：同步更新 `manifest.json`、`package.json`、Popup 和全景控制台的版本信息为 `v1.4.1`，工具计数升级至 `20`。
 
 ### v1.4.0 (2026-07-07)
 
