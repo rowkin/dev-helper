@@ -1,5 +1,18 @@
 # DevHelper 更新日志
 
+## v1.5.1 (2026-07-17)
+
+### ⚙️ v1.5.1 优化与修复
+
+* **一键 AI 智能诊断交互与渲染适配升级**：
+  * **友好加载动效**：在 BMI 诊断等待时引入带有 CSS 旋转效果的 Loading 动画，并在请求发送期间禁用诊断按钮（显示“⚡ 诊断中...”），提供防重触交互。
+  * **富文本渲染支持**：利用内置的 `renderInlineMarkdown` 引擎对 BMI 流式返回数据进行富文本渲染，确保膳食、运动计划中的加粗与列表样式严格排版。
+* **AI 引擎调用兼容性修复**：
+  * **内置 AI 服务修复**：在 `js/ai-service.js` 中补全了遗失的 `callBuiltinAI` 函数实现，确保切换到 Chrome 内置 AI (Gemini Nano) 时能够流畅提问对话而不再报错。
+  * **推理模型参数自适应**：针对以 `kimi-k`、`o1-` 等命名的严格限制 temperature 参数的推理大模型，自动在请求体中剔除 `temperature` 参数，彻底解决了 Kimi/OpenAI 推理模型下报 `invalid temperature`（400 Bad Request）的异常。
+* **版本与站点全线升级**：
+  * 将 `manifest.json`、`package.json`、Popup 弹出页、主页关于面板及落地页站点 `site/index.html` 一体化升级至 `v1.5.1`。
+
 ## v1.5.0 (2026-07-17)
 
 ### 🚀 v1.5.0 新功能
